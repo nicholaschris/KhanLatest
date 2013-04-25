@@ -11,7 +11,7 @@
 {% block pagecontent %}
     <article id="homepage">
 
-        <div id="social-actions">
+        <div id="social-actions"> {# THIS NEEDS ATTENTION #}
             <table>
                 <tr>
                     {#
@@ -47,7 +47,7 @@
             </table>
         </div>
         <div class="clear"></div>
-        <div id="homepage-welcome-container">
+        <div id="homepage-welcome-container"> {# REMOVE VIDEO AND WELCOME TEXT #}
             <iframe id="homepage-video" src="http://www.youtube.com/embed/tC80BNOKJtk"
                     frameborder="0"
                     allowfullscreen></iframe>
@@ -56,11 +56,11 @@
                     <div id="main-video">
 
                     </div>
-                    <h1>
+                    <h1 id="welcome-welcome">
                         Welkom bij Khan Academie
                     </h1>
 
-                    <p>
+                    <p id="welcome-blurb">
                         Wij zijn op een missie om jou te helpen alles te leren, over onderwerpen 
 						die jou interesseren, wanneer jij het wilt en in je eigen tempo. De 
 						uiteenlopende onderwerpen worden met een groeiend aantal

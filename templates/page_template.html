@@ -88,6 +88,7 @@
 
     <link rel="shortcut icon" href="/favicon.ico?leaf">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'> {# OPEN-SANS-LIGHT FONT #}
 
     {{ js_css_packages.css_package("shared") }}
     {% block pagecss %}{% endblock pagecss %}
@@ -217,16 +218,15 @@
 
                         <div id="stats">
                         </div>
-                        <div id="search-box">
-                                <form class="page-search" action="/search">
-                                    <input id="search-input"
-				    type="text" placeholder="Zoek op video's en oefeningen"
-                                           name="page_search_query" value='{{ page_search_query|escape }}'
-                                           class="ui-corner-all placeholder simple-input search-input blur-on-esc"/>
-                                    <input
-                                            type="submit" value=" " class="search-submit"/>
-                                </form>
-                            </div>
+                        {# <div id="search-box"> #} {# MOVE TO BELOW NAV #} {# ISSUE001 #}
+{#                             <form class="page-search" action="/search">
+                                <input id="search-input"
+				                       type="text" placeholder="Zoek op video's en oefeningen"
+                                       name="page_search_query" value='{{ page_search_query|escape }}'
+                                       class="ui-corner-all placeholder simple-input search-input blur-on-esc"/>
+                                 <input type="submit" value=" " class="search-submit"/>
+                            </form>
+                        </div> #}
                         <div class="site-wide-navigation">
                             <ul class="links nav-subheader">
                                 <li>
@@ -319,6 +319,22 @@
 
                 {% endblock pagemessage %}
 
+            </div>
+            <div id="below-top-header" class="row-fluid span12">
+                <div id="below-header-third1" class="span-one-third span4"></div>
+                <div id="below-header-third2" class="span-one-third span4"></div>
+                <div id="below-header-third3" class="span-one-third span4"></div>
+            </div>
+            {# MOVE TO BELOW NAV #} {# ISSUE001 #} {# MOVED #} {# OR MOVE ONTO HOMEPAGE #}
+            <div id="search-box"> 
+                <form class="page-search" action="/search">
+                    <input id="search-input"
+                    type="text" placeholder="Zoek op video's en oefeningen"
+                    name="page_search_query" value='{{ page_search_query|escape }}'
+                    class="ui-corner-all placeholder simple-input search-input blur-on-esc"/>
+                    <input
+                    type="submit" value=" " class="search-submit"/>
+                </form>
             </div>
             {% block pagecontent %}
             {% endblock pagecontent %}

@@ -64,7 +64,8 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     color: #444;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/ /*CHANGED BACKGROUND COLOR*/
+    background: #182D39; /*#E6E7E8;*/ 
     line-height: 22px;
 }
 
@@ -77,9 +78,18 @@ body {
 
 #page-container {
     background-position: 0 85px;
-    max-width: 1200px;
+    /*max-width: 1200px;*/ /*MOVE TO #PAGE_CONTAINER_INNER OR #HOMEPAGE*/
     position: relative;
     margin: 0 auto;
+}
+
+#page-container-inner {
+    /*max-width: 1200px;*/ /*NOT HERE*/
+}
+
+#welcome-welcome {
+    color: #F0F0F0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 div#content {
@@ -90,8 +100,9 @@ article {
     padding: 0 19px;
     background: #fff;
     position: relative;
-    margin: 0 1px;
-    border: 1px solid rgb(231, 231, 231);
+    /*margin: 0 1px;*/ /*CHANGE*/
+    margin: 0 auto;
+    /*border: 1px solid rgb(231, 231, 231);*/ /*REMOVE*/
 }
 
 /* Basic typography for the entire site */
@@ -439,12 +450,37 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 #top-header {
+    /*width: 1170px;*/ /*REMOVE FOR NOW BUT USE LATER?*/
     min-height: 84px; /*navbar height*/
+    background: #E6E7E8;
 }
-
+.span-one-third {
+    width: 33.33%;
+    float: left;
+}
+#below-top-header {
+    height: 20px;
+    line-height: 10px;
+    background: #B1CF37;
+}
+#below-header-third1 {
+    height: 20px;
+    /*line-height: 10px;*/
+    background: #5FC9E5;
+}
+#below-header-third2 {
+    height: 20px;
+    /*line-height: 10px;*/
+    background: #B1CF37;
+}
+#below-header-third3 {
+    height: 20px;
+    /*line-height: 10px;*/
+    background: #F48123;
+}
 .dark #top-header #logo #logo-image {
     /* TODO what is this?*/
-    background-image: url(/images/non-repeating-sprites.4.png);
+    background-image: url(/images/non-repeating-sprites.4.png) no-;
     background-position: -320px -465px;
 }
 
@@ -753,6 +789,8 @@ a.about-link.selected:after {
     top: 0;
     right: 10px;
     left: 0;
+    margin: 0 auto;
+    width: 1200px;
 }
 
 .top-header-links span img {
@@ -922,19 +960,23 @@ span.username_and_notification .user-name {
 }
 
 #search-box {
-    margin:20px;
+    margin:20px auto;
+    max-width: 1200px;
+    background: #51BEB4;
 }
 
 #search-box form input {
     display: inline-block;
-    width: 300px;
-    max-width: 80%;
+    /*width: 300px;*/
+    width: 1200px;
+    /*max-width: 80%;*/
+    height: 40px;
 }
 
 .page-search {
     display: block;
     padding: 0;
-    margin-top: 52px;
+    /*margin-top: 52px;*/ /*WHY IS THIS HERE?*/
     margin-right:-16px;
 }
 
@@ -2715,7 +2757,14 @@ background: #fafafa;
 /* Homepage styles */
 /* TODO (Maarten:) homepage styles should be in homepage.css... Or else why would it exist? */
 #homepage {
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/ /*CHANGE BACKGROUND COLOR*/
+    background: #182D39;
+    max-width: 1200px;
+}
+
+#welcome-blurb {
+    font-family: 'Open sans', sans-serif;
+    color: #F0F0F0;
 }
 
 #homepage hr {
@@ -2973,9 +3022,10 @@ div.arrow-left-shadow {
 #logo {
     display: inline-block;
     float:left;
-    width: 220px;
-	height: 136px;
-    background-image: url("/images/logo-kahn.png");
+    width: 300px;
+	height: 110px;
+    /*background-image: url("/images/Khan-13.png");*/
+    background: url('/images/Khan-13.png') no-repeat;
     left: 0;
     margin-left: 24px;
 }
